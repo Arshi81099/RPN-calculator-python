@@ -26,7 +26,7 @@ def eval_expression(tokens, stack):
            
             stack.append(op(b,a))
         else:
-            raise ValueError("WTF? %s" % token)
+            raise ValueError("Wrong Input? %s" % token)
     return stack
 
 if __name__ == '__main__':
