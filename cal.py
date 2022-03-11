@@ -27,8 +27,29 @@ def eval_expression(tokens, stack):
             raise ValueError("What is this? %s" % token)
     return stack
 
+
+class TestMethods(unittest.TestCase):
+	
+	# Returns True if it gives 119.
+    def test_add(self):
+	    self.assertEqual( 45 + 74, 119)
+
+	# Returns True if it give 6.
+    def test_sub(self):		
+	    self.assertEqual(36 - 30, 6)
+
+    def test_div(self):
+        self.assertEqual(36/9, 4)
+        
+	# Returns TRUE if it gives 28
+    def test_mul(self):		
+	    self.assertEqual(7 * 4, 28)
+
 if __name__ == '__main__':
+    unittest.main()
     stack = []
+    
+
     while True:
         expression = input('> ')
         if expression in ['quit','q','exit']:
